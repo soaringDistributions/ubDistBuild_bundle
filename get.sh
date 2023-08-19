@@ -2903,12 +2903,12 @@ wget 'https://gitlab.com/api/v4/projects/35133362/packages/generic/wsl-usb-gui/4
 mkdir -p "$scriptAbsoluteFolder"/virtualbox
 cd "$scriptAbsoluteFolder"/virtualbox
 rm -f 'VirtualBox-7.0.10-158379-Win.exe'
-wget 'https://download.virtualbox.org/virtualbox/7.0.10/VirtualBox-7.0.10-158379-Win.exe'
+#wget 'https://download.virtualbox.org/virtualbox/7.0.10/VirtualBox-7.0.10-158379-Win.exe'
 
 mkdir -p "$scriptAbsoluteFolder"/qemu
 cd "$scriptAbsoluteFolder"/qemu
 rm -f 'qemu-w64-setup-20230817.exe'
-wget 'https://qemu.weilnetz.de/w64/2023/qemu-w64-setup-20230817.exe'
+#wget 'https://qemu.weilnetz.de/w64/2023/qemu-w64-setup-20230817.exe'
 
 
 
