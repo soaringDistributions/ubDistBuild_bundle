@@ -2900,6 +2900,14 @@ rm -f 'WSL-USB-4.0.0.msi'
 wget 'https://gitlab.com/api/v4/projects/35133362/packages/generic/wsl-usb-gui/4.0.0/WSL-USB-4.0.0.msi'
 
 
+
+mkdir -p "$scriptAbsoluteFolder"/vc_redist
+cd "$scriptAbsoluteFolder"/vc_redist
+rm -f 'vc_redist.x64.exe'
+wget 'https://aka.ms/vs/17/release/vc_redist.x64.exe'
+
+
+
 mkdir -p "$scriptAbsoluteFolder"/virtualbox
 cd "$scriptAbsoluteFolder"/virtualbox
 rm -f 'VirtualBox-7.0.10-158379-Win.exe'
