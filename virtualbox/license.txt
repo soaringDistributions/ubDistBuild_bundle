@@ -1,0 +1,6 @@
+
+https://www.virtualbox.org/wiki/Downloads
+https://download.virtualbox.org/virtualbox/7.0.10/VirtualBox-7.0.10-158379-Win.exe
+
+'The binaries are released under the terms of the GPL version 3.'
+

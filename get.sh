@@ -2891,18 +2891,24 @@ cd "$scriptAbsoluteFolder"
 
 mkdir -p "$scriptAbsoluteFolder"/usbip-win
 cd "$scriptAbsoluteFolder"/usbip-win
-rm -f usbipd-win_3.1.0.msi
-wget https://github.com/dorssel/usbipd-win/releases/download/v3.1.0/usbipd-win_3.1.0.msi
+rm -f 'usbipd-win_3.1.0.msi'
+wget 'https://github.com/dorssel/usbipd-win/releases/download/v3.1.0/usbipd-win_3.1.0.msi'
 
 mkdir -p "$scriptAbsoluteFolder"/wsl-usb-gui
 cd "$scriptAbsoluteFolder"/wsl-usb-gui
-rm -f WSL-USB-4.0.0.msi
-wget https://gitlab.com/api/v4/projects/35133362/packages/generic/wsl-usb-gui/4.0.0/WSL-USB-4.0.0.msi
+rm -f 'WSL-USB-4.0.0.msi'
+wget 'https://gitlab.com/api/v4/projects/35133362/packages/generic/wsl-usb-gui/4.0.0/WSL-USB-4.0.0.msi'
 
 
+mkdir -p "$scriptAbsoluteFolder"/virtualbox
+cd "$scriptAbsoluteFolder"/virtualbox
+rm -f 'VirtualBox-7.0.10-158379-Win.exe'
+wget 'https://download.virtualbox.org/virtualbox/7.0.10/VirtualBox-7.0.10-158379-Win.exe'
 
-
-
+mkdir -p "$scriptAbsoluteFolder"/qemu
+cd "$scriptAbsoluteFolder"/qemu
+rm -f 'qemu-w64-setup-20230817.exe'
+wget 'https://qemu.weilnetz.de/w64/2023/qemu-w64-setup-20230817.exe'
 
 
 
