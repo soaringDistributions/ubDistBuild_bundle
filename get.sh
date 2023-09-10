@@ -2923,7 +2923,7 @@ rm -f 'qemu-w64-setup-20230817.exe'
 mkdir -p "$scriptAbsoluteFolder"/geda-gaf
 cd "$scriptAbsoluteFolder"/geda-gaf
 rm -f 'geda-gaf-1.10.2.tar.gz'
-[[ ! -e geda-gaf-1.10.2.tar.gz ]] && wget 'ftp.geda-project.org/geda-gaf/stable/v1.10/1.10.2/geda-gaf-1.10.2.tar.gz'
+[[ ! -e geda-gaf-1.10.2.tar.gz ]] && wget -T 90 --tries=3 'ftp.geda-project.org/geda-gaf/stable/v1.10/1.10.2/geda-gaf-1.10.2.tar.gz'
 [[ ! -e geda-gaf-1.10.2.tar.gz ]] && wget 'https://web.archive.org/web/20230413214011/http://ftp.geda-project.org/geda-gaf/stable/v1.10/1.10.2/geda-gaf-1.10.2.tar.gz'
 [[ ! -e geda-gaf-1.10.2.tar.gz ]] && wget 'https://web.archive.org/web/http://ftp.geda-project.org/geda-gaf/stable/v1.10/1.10.2/geda-gaf-1.10.2.tar.gz'
 
