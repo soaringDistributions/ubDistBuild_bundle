@@ -2900,6 +2900,7 @@ mkdir -p "$scriptAbsoluteFolder"/wsl-usb-gui
 cd "$scriptAbsoluteFolder"/wsl-usb-gui
 rm -f 'WSL-USB-4.0.0.msi'
 #wget 'https://gitlab.com/api/v4/projects/35133362/packages/generic/wsl-usb-gui/4.0.0/WSL-USB-4.0.0.msi'
+rm -f 'WSL-USB-4.1.0.msi'
 wget 'https://gitlab.com/api/v4/projects/35133362/packages/generic/wsl-usb-gui/4.1.0/WSL-USB-4.1.0.msi'
 
 
