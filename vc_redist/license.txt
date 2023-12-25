@@ -19,5 +19,6 @@ Consequently, for any software which depends on 'vc_redist' and which does not i
 'Redistributing Visual C++ Files article on the Microsoft Learn website. This article contains the “REDIST list” that specifies the files that you are allowed to copy and distribute as part of your program’s installation package, subject to the license terms. One of the files listed is vc_redist.x64.exe, which means you can redistribute it as long as you follow the guidelines in the article.' -Bing Chat, 2023-12-25
 
 
-
+There is apparently some possibility that VirtualBox 7.0.13 has again included 'vc_redist', and that the removal was for some technical reason. However, the eventual elimination of VirtualBox should still occur, as with any case of erratic dependency issues.
+https://forums.virtualbox.org/viewtopic.php?t=108556&start=30
 
