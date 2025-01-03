@@ -2889,6 +2889,16 @@ cd "$scriptAbsoluteFolder"
 
 
 
+
+mkdir -p "$scriptAbsoluteFolder"/filezilla
+cd "$scriptAbsoluteFolder"/filezilla
+#rm -f 'FileZilla_3.68.1_win64.zip'
+# https://www.majorgeeks.com/files/details/filezilla_64_bit.html   FileZilla portable binaries were downloaded from  Major Geeks  for reasons of additional assurance of safe integrity.
+#rm -f 'FileZilla_3.68.1_src.tar.xz'
+# https://filezilla-project.org/download.php?platform=source   FileZilla source code was downloaded from  filezilla-project.org  - CAUTION: DANGER: that location is less trusted.
+
+
+
 mkdir -p "$scriptAbsoluteFolder"/usbip-win
 cd "$scriptAbsoluteFolder"/usbip-win
 rm -f 'usbipd-win_3.1.0.msi'
@@ -2930,6 +2940,18 @@ rm -f 'geda-gaf-1.10.2.tar.gz'
 [[ ! -e geda-gaf-1.10.2.tar.gz ]] && wget -T 90 --tries=3 'ftp.geda-project.org/geda-gaf/stable/v1.10/1.10.2/geda-gaf-1.10.2.tar.gz'
 [[ ! -e geda-gaf-1.10.2.tar.gz ]] && wget 'https://web.archive.org/web/20230413214011/http://ftp.geda-project.org/geda-gaf/stable/v1.10/1.10.2/geda-gaf-1.10.2.tar.gz'
 [[ ! -e geda-gaf-1.10.2.tar.gz ]] && wget 'https://web.archive.org/web/http://ftp.geda-project.org/geda-gaf/stable/v1.10/1.10.2/geda-gaf-1.10.2.tar.gz'
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
