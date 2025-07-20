@@ -5583,7 +5583,12 @@ cd "$scriptAbsoluteFolder"/geda-gaf
 
 
 
-
+mkdir -p "$scriptAbsoluteFolder"/7zip
+cd "$scriptAbsoluteFolder"/7zip
+rm -f license.txt
+wget 'https://www.7-zip.org/license.txt'
+rm -f 7zr.exe
+wget 'https://www.7-zip.org/a/7zr.exe'
 
 
 
