@@ -5541,7 +5541,7 @@ rm -f 'usbipd-win_3.1.0.msi'
 #wget 'https://github.com/dorssel/usbipd-win/releases/download/v3.1.0/usbipd-win_3.1.0.msi'
 rm -f 'usbipd-win_3.2.0.msi'
 wget 'https://github.com/dorssel/usbipd-win/releases/download/v3.2.0/usbipd-win_3.2.0.msi'
-rm -f 'usbipd-win_5.1.0.msi'
+rm -f 'usbipd-win_5.1.0_x64.msi'
 wget 'https://github.com/dorssel/usbipd-win/releases/download/v5.1.0/usbipd-win_5.1.0_x64.msi'
 
 mkdir -p "$scriptAbsoluteFolder"/wsl-usb-gui
