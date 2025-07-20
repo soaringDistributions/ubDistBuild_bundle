@@ -1180,13 +1180,6 @@ _safeBackup() {
 	[[ "$1" == "/$USER" ]] && return 1
 	[[ "$1" == "/$USER/" ]] && return 1
 	
-	[[ "$1" == "/root" ]] && return 1
-	[[ "$1" == "/root/" ]] && return 1
-	[[ "$1" == "/root/$USER" ]] && return 1
-	[[ "$1" == "/root/$USER/" ]] && return 1
-	[[ "$1" == "/$USER" ]] && return 1
-	[[ "$1" == "/$USER/" ]] && return 1
-	
 	[[ "$1" == "/tmp" ]] && return 1
 	[[ "$1" == "/tmp/" ]] && return 1
 	
@@ -1221,13 +1214,6 @@ _command_safeBackup() {
 	[[ "$1" == "/home/" ]] && return 1
 	[[ "$1" == "/home/$USER" ]] && return 1
 	[[ "$1" == "/home/$USER/" ]] && return 1
-	[[ "$1" == "/$USER" ]] && return 1
-	[[ "$1" == "/$USER/" ]] && return 1
-	
-	[[ "$1" == "/root" ]] && return 1
-	[[ "$1" == "/root/" ]] && return 1
-	[[ "$1" == "/root/$USER" ]] && return 1
-	[[ "$1" == "/root/$USER/" ]] && return 1
 	[[ "$1" == "/$USER" ]] && return 1
 	[[ "$1" == "/$USER/" ]] && return 1
 	
@@ -1693,10 +1679,10 @@ _visualPrompt() {
 	export -f _visualPrompt_promptCommand
 	export PROMPT_COMMAND=_visualPrompt_promptCommand
 	
-	#export PS1='\[\033[01;40m\]\[\033[01;36m\]\[\033[01;34m\]|\[\033[01;31m\]${?}:${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\u\[\033[01;32m\]@\h\[\033[01;36m\]\[\033[01;34m\])\[\033[01;36m\]\[\033[01;34m\]-(\[\033[01;35m\]$(date +%H:%M:%S\.%d)\[\033[01;34m\])\[\033[01;36m\]|\[\033[00m\]\n\[\033[01;40m\]\[\033[01;36m\]\[\033[01;34m\]|\[\033[37m\][\w]\[\033[00m\]\n\[\033[01;36m\]\[\033[01;34m\]|$PS1_lineNumberText\[\033[01;34m\]) \[\033[36m\]>\[\033[00m\] '
+	#export PS1='\[\033[01;40m\]\[\033[01;36m\]\[\033[01;34m\]|\[\033[01;31m\]${?}:${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\u\[\033[01;32m\]@\h\[\033[01;36m\]\[\033[01;34m\])\[\033[01;36m\]\[\033[01;34m\]-(\[\033[01;35m\]$(date +%H:%M:%S\ .%d)\[\033[01;34m\])\[\033[01;36m\]|\[\033[00m\]\n\[\033[01;40m\]\[\033[01;36m\]\[\033[01;34m\]|\[\033[37m\][\w]\[\033[00m\]\n\[\033[01;36m\]+\[\033[01;34m\]-|\#) \[\033[36m\]>\[\033[00m\] '
 	
 	
-	#export PS1='\[\033[01;40m\]\[\033[01;36m\]\[\033[01;34m\]|\[\033[01;31m\]${?}:${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\u\[\033[01;32m\]@\h\[\033[01;36m\]\[\033[01;34m\])\[\033[01;36m\]\[\033[01;34m\]-'"$prompt_cloudNetName"'(\[\033[01;35m\]$(date +%H:%M:%S\.%d)\[\033[01;34m\])\[\033[01;36m\]|\[\033[00m\]\n\[\033[01;40m\]\[\033[01;36m\]\[\033[01;34m\]|\[\033[37m\][\w]\[\033[00m\]\n\[\033[01;36m\]\[\033[01;34m\]|$PS1_lineNumberText\[\033[01;34m\]) \[\033[36m\]'""'>\[\033[00m\] '
+	#export PS1='\[\033[01;40m\]\[\033[01;36m\]\[\033[01;34m\]|\[\033[01;31m\]${?}:${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\u\[\033[01;32m\]@\h\[\033[01;36m\]\[\033[01;34m\])\[\033[01;36m\]\[\033[01;34m\]-'"$prompt_cloudNetName"'(\[\033[01;35m\]$(date +%H:%M:%S\.%d)\[\033[01;34m\])\[\033[01;36m\]|\[\033[00m\]\n\[\033[01;40m\]\[\033[01;36m\]\[\033[01;34m\]|\[\033[37m\][\w]\[\033[00m\]\n\[\033[01;36m\]+\[\033[01;34m\]-|\#) \[\033[36m\]>\[\033[00m\] '
 	
 	
 	if [[ "$SHELL" == *"/nix/store/"*"/bin/bash"* ]]
@@ -1706,8 +1692,7 @@ _visualPrompt() {
 		export prompt_nixShell=""
 	fi
 	
-	#export PS1='\[\033[01;40m\]\[\033[01;36m\]\[\033[01;34m\]|\[\033[01;31m\]${?}:${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\u\[\033[01;32m\]@\h\[\033[01;36m\]\[\033[01;34m\])\[\033[01;36m\]\[\033[01;34m\]-'"$prompt_cloudNetName"'(\[\033[01;35m\]$(date +%H:%M:%S\.%d)\[\033[01;34m\])\[\033[01;36m\]|\[\033[00m\]'"$prompt_nixShell"'\n\[\033[01;40m\]\[\033[01;36m\]\[\033[01;34m\]|\[\033[37m\][\w]\[\033[00m\]\n\[\033[01;36m\]\[\033[01;34m\]|$([[ "$PS1_lineNumber" == "1" ]] && echo -e -n '"'"'\[\033[01;36m\]'"'"'$PS1_lineNumber || echo -e -n $PS1_lineNumber)\[\033[01;34m\]) \[\033[36m\]'""'>\[\033[00m\] '
-	
+	#export PS1='\[\033[01;40m\]\[\033[01;36m\]\[\033[01;34m\]|\[\033[01;31m\]${?}:${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\u\[\033[01;32m\]@\h\[\033[01;36m\]\[\033[01;34m\])\[\033[01;36m\]\[\033[01;34m\]-'"$prompt_cloudNetName"'(\[\033[01;35m\]$(date +%H:%M:%S\.%d)\[\033[01;34m\])\[\033[01;36m\]|\[\033[00m\]'"$prompt_nixShell"'\n\[\033[01;40m\]\[\033[01;36m\]\[\033[01;34m\]|\[\033[37m\][\w]\[\033[00m\]\n\[\033[01;36m\]\[\033[01;34m\]|$PS1_lineNumberText\[\033[01;34m\]) \[\033[36m\]'""'>\[\033[00m\] '
 	
 	
 	if ! _if_cygwin
@@ -2872,7 +2857,6 @@ then
 	"$@"
 	internalFunctionExitStatus="$?"
 	return "$internalFunctionExitStatus" > /dev/null 2>&1
-	exit "$internalFunctionExitStatus"
 fi
 #if [[ "$1" != '_'* ]]
 #then
@@ -2905,6 +2889,8 @@ rm -f 'usbipd-win_3.1.0.msi'
 #wget 'https://github.com/dorssel/usbipd-win/releases/download/v3.1.0/usbipd-win_3.1.0.msi'
 rm -f 'usbipd-win_3.2.0.msi'
 wget 'https://github.com/dorssel/usbipd-win/releases/download/v3.2.0/usbipd-win_3.2.0.msi'
+rm -f 'usbipd-win_5.1.0.msi'
+wget 'https://github.com/dorssel/usbipd-win/releases/download/v5.1.0/usbipd-win_5.1.0_x64.msi'
 
 mkdir -p "$scriptAbsoluteFolder"/wsl-usb-gui
 cd "$scriptAbsoluteFolder"/wsl-usb-gui
@@ -2912,13 +2898,15 @@ rm -f 'WSL-USB-4.0.0.msi'
 #wget 'https://gitlab.com/api/v4/projects/35133362/packages/generic/wsl-usb-gui/4.0.0/WSL-USB-4.0.0.msi'
 rm -f 'WSL-USB-4.1.0.msi'
 wget 'https://gitlab.com/api/v4/projects/35133362/packages/generic/wsl-usb-gui/4.1.0/WSL-USB-4.1.0.msi'
+rm -f 'WSL-USB-5.7.0.msi'
+wget 'https://gitlab.com/api/v4/projects/35133362/packages/generic/wsl-usb-gui/5.7.0/WSL-USB-5.7.0.msi'
 
 
 
 mkdir -p "$scriptAbsoluteFolder"/vc_redist
 cd "$scriptAbsoluteFolder"/vc_redist
-rm -f 'vc_redist.x64.exe'
-wget 'https://aka.ms/vs/17/release/vc_redist.x64.exe'
+#rm -f 'vc_redist.x64.exe'
+#wget 'https://aka.ms/vs/17/release/vc_redist.x64.exe'
 
 
 
@@ -2936,7 +2924,7 @@ rm -f 'qemu-w64-setup-20230817.exe'
 
 mkdir -p "$scriptAbsoluteFolder"/geda-gaf
 cd "$scriptAbsoluteFolder"/geda-gaf
-rm -f 'geda-gaf-1.10.2.tar.gz'
+#rm -f 'geda-gaf-1.10.2.tar.gz'
 [[ ! -e geda-gaf-1.10.2.tar.gz ]] && wget -T 90 --tries=3 'ftp.geda-project.org/geda-gaf/stable/v1.10/1.10.2/geda-gaf-1.10.2.tar.gz'
 [[ ! -e geda-gaf-1.10.2.tar.gz ]] && wget 'https://web.archive.org/web/20230413214011/http://ftp.geda-project.org/geda-gaf/stable/v1.10/1.10.2/geda-gaf-1.10.2.tar.gz'
 [[ ! -e geda-gaf-1.10.2.tar.gz ]] && wget 'https://web.archive.org/web/http://ftp.geda-project.org/geda-gaf/stable/v1.10/1.10.2/geda-gaf-1.10.2.tar.gz'
